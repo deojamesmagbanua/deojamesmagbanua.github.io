@@ -6,8 +6,79 @@
     position: absolute;
     top: 25px;
     right: -50px;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     padding-left: 20px;
     padding-right: 20px;
-  }
+}
+
+#atf-video {
+    width: 100%;
+    height: auto;
+    position: fixed;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    #atf-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    #atf-video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.features-5 {
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    position: relative
+}
+
+.features-5 .info {
+    text-align: center;
+    max-width: 310px;
+    min-height: 320px
+}
+
+.features-5 .info .icon,
+.features-5 .info .info-title,
+.features-5 .info p {
+    color: #fff
+}
+
+.features-5 .container [class*=col-] {
+    border: 1px solid hsla(0, 0%, 100%, .35);
+    border-top: 0;
+    border-left: 0
+}
+
+.features-5 .container [class*=col-]:last-child {
+    border-right: 0
+}
+
+.features-5 .container .row:last-child [class*=col-] {
+    border-bottom: 0
+}
+
+.features-5:after {
+    background: rgba(0, 0, 0, .55);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: 0;
+    left: 0;
+    top: 0
+}
+
+.features-5 .container,
+.features-5 .title {
+    position: relative;
+    z-index: 2;
+    color: #fff
+}
