@@ -1,0 +1,320 @@
+<!--
+ =========================================================
+ * Material Kit - v2.0.6
+ =========================================================
+
+ * Product Page: https://www.creative-tim.com/product/material-kit
+ * Copyright 2019 Creative Tim (http://www.creative-tim.com)
+   Licensed under MIT (https://github.com/creativetimofficial/material-kit/blob/master/LICENSE.md)
+
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Lipsum Inc.
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+    name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Work+Sans|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="./assets/css/material-kit.css?v=2.0.6" rel="stylesheet" />
+  <style>
+    .btn-align {
+      padding: 6px 12px;
+      line-height: 1.42857143;
+      vertical-align: middle;
+    }
+
+    .background-pattern {
+      background-color: #aaaaaa;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 2 1'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23aaaaaa'/%3E%3Cstop offset='1' stop-color='%23ffffff'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23ffffff' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23ffffff' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='2' y2='2'%3E%3Cstop offset='0' stop-color='%23ffffff' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23ffffff' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='2' height='1'/%3E%3Cg %3E%3Cpolygon fill='url(%23b)' points='0 1 0 0 2 0'/%3E%3Cpolygon fill='url(%23c)' points='2 1 2 0 0 0'/%3E%3C/g%3E%3C/svg%3E");
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    /* Mark input boxes that gets an error on validation: */
+    input.invalid {
+      background-color: #ffdddd;
+    }
+
+    /* Hide all steps by default: */
+    .tab {
+      display: none;
+    }
+
+    /* Make circles that indicate the steps of the form: */
+    .step {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbbbbb;
+      border: none;
+      border-radius: 50%;
+      display: inline-block;
+      opacity: 0.5;
+    }
+
+    /* Mark the active step: */
+    .step.active {
+      opacity: 1;
+    }
+
+    /* Mark the steps that are finished and valid: */
+    .step.finish {
+      background-color: #4CAF50;
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body class="login-page" style="overflow-x: hidden;">
+
+  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100"
+    id="sectionsNav">
+    <div class="container-fluid">
+      <ul class="navbar-nav ml-auto text-dark">
+        <li class="nav-item">
+          <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#" target="_blank"
+            data-original-title="Back to Homepage">
+            <i class="fa fa-home"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="row">
+
+    <div class="col-lg-8 col-md-6 px-0 d-none d-md-block">
+      <div class="page-header header-filter"
+        style="background-image: url('./assets/img/bg7.jpg'); background-size: cover; background-position: top center;">
+        <div class="container text-center">
+          <img src="./assets/img/logo-light.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 px-0">
+      <div class="page-header background-pattern">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-10 text-dark">
+              <img src="./assets/img/logo-dark.png" width="250px" class="d-block d-md-none mb-5 mx-auto">
+              <h3 class="font-weight-bold my-0"><i class="fa fa-pencil"></i> Apply now!</h3>
+              <p class="text-muted">Get started by confirming your phone number below.</p>
+              <div class="card">
+                <div class="card-body">
+                  <form id="signup" action="/">
+                    <div class="tab">
+                      <div class="form-group has-success form-group-lg">
+                        <label class="text-muted">Phone Number</label>
+                        <input type="number" class="form-control has-success font-control-lg"
+                          placeholder="+63 xxx xxx xxxx" oninput="this.className = 'form-control'">
+                        <div class="input-group">
+                          <span class="input-group-btn">
+                            <i class="material-icons">dialpad</i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="tab">
+                      <div class="alert alert-success rounded" role="alert">
+                        <i class="fa fa-check fa-2x align-middle mr-2"></i> Confirmation code successfully sent!
+                      </div>
+                      <div class="form-group has-success form-group-lg">
+                        <label class="text-muted">Confirmation Code</label>
+                        <input type="number" class="form-control has-success font-control-lg" oninput="this.className = 'form-control'">
+                        <div class="input-group">
+                          <span class="input-group-btn">
+                            <i class="material-icons">security</i>
+                          </span>
+                        </div>
+                        <a href="#" class="btn-link text-success small text-center">Resend Code?</a>
+                      </div>
+                    </div>
+
+                    <div class="clearfix mb-4">
+                      <button class="btn btn-link" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                      <button class="btn btn-success float-right" type="button" id="nextBtn"
+                        onclick="nextPrev(1)">Next</button>
+                    </div>
+
+                    <!-- Circles which indicates the steps of the form: -->
+                    <span class="step"></span>
+                    <span class="step"></span>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+            <span class="text-muted">Already have an account? <a href="#"
+                class="btn-link text-success font-weight-bold">Sign
+                In</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <footer class="footer">
+      <div class="container-fluid">
+        <nav class="float-none float-md-left">
+          <ul>
+            <li>
+              <a href="#" class="btn-link media-light text-light font-weight-bold">
+                Homepage
+              </a>
+            </li>
+            <li>
+              <a href="#" class="btn-link media-light text-light font-weight-bold">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="#" class="btn-link media-light text-light font-weight-bold">
+                FAQ's
+              </a>
+            </li>
+            <li>
+              <a href="#" class="btn-link media-light text-light font-weight-bold">
+                Blog
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <!--   Core JS Files   -->
+    <script src="./assets/js/core/jquery.min.js" type="text/javascript"></script>
+    <script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
+    <script src="./assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+    <script src="./assets/js/plugins/moment.min.js"></script>
+    <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+    <script src="./assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+    <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+    <script src="./assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+    <!--  Google Maps Plugin    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+    <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+    <script src="./assets/js/material-kit.js?v=2.0.6" type="text/javascript"></script>
+
+    <script>
+      $(document).ready(function () {
+        var $window = $(window);
+        var $homeIcon = $('.media-light');
+
+        function checkWidth() {
+          var windowsize = $window.width();
+          if (window.innerWidth <= 768) {
+            $homeIcon.addClass('text-muted');
+            $homeIcon.removeClass('text-light');
+          } else {
+            $homeIcon.addClass('text-light');
+            $homeIcon.removeClass('text-muted');
+          }
+        }
+        // Execute on load
+        checkWidth();
+        // Bind event listener
+        $(window).resize(checkWidth);
+      });
+    </script>
+
+    <script>
+      var currentTab = 0; // Current tab is set to be the first tab (0)
+      showTab(currentTab); // Display the current tab
+
+      function showTab(n) {
+        // This function will display the specified tab of the form ...
+        var x = document.getElementsByClassName("tab");
+        x[n].style.display = "block";
+        // ... and fix the Previous/Next buttons:
+        if (n == 0) {
+          document.getElementById("prevBtn").style.display = "none";
+        } else {
+          document.getElementById("prevBtn").style.display = "inline";
+        }
+        if (n == (x.length - 1)) {
+          document.getElementById("nextBtn").innerHTML = "Confirm";
+        } else {
+          document.getElementById("nextBtn").innerHTML = "Submit";
+        }
+        // ... and run a function that displays the correct step indicator:
+        fixStepIndicator(n)
+      }
+
+      function nextPrev(n) {
+        // This function will figure out which tab to display
+        var x = document.getElementsByClassName("tab");
+        // Exit the function if any field in the current tab is invalid:
+        if (n == 1 && !validateForm()) return false;
+        // Hide the current tab:
+        x[currentTab].style.display = "none";
+        // Increase or decrease the current tab by 1:
+        currentTab = currentTab + n;
+        // if you have reached the end of the form... :
+        if (currentTab >= x.length) {
+          //...the form gets submitted:
+          document.getElementById("signup").submit();
+          return false;
+        }
+        // Otherwise, display the correct tab:
+        showTab(currentTab);
+      }
+
+      function validateForm() {
+        // This function deals with validation of the form fields
+        var x, y, i, valid = true;
+        x = document.getElementsByClassName("tab");
+        y = x[currentTab].getElementsByTagName("input");
+        // A loop that checks every input field in the current tab:
+        for (i = 0; i < y.length; i++) {
+          // If a field is empty...
+          if (y[i].value == "") {
+            // add an "invalid" class to the field:
+            y[i].className += " invalid";
+            // and set the current valid status to false:
+            valid = false;
+          }
+        }
+        // If the valid status is true, mark the step as finished and valid:
+        if (valid) {
+          document.getElementsByClassName("step")[currentTab].className += " finish";
+        }
+        return valid; // return the valid status
+      }
+
+      function fixStepIndicator(n) {
+        // This function removes the "active" class of all steps...
+        var i, x = document.getElementsByClassName("step");
+        for (i = 0; i < x.length; i++) {
+          x[i].className = x[i].className.replace(" active", "");
+        }
+        //... and adds the "active" class to the current step:
+        x[n].className += " active";
+      }
+    </script>
+</body>
+
+</html>
