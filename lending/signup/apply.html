@@ -76,6 +76,54 @@
       -webkit-appearance: none;
       margin: 0;
     }
+
+
+    #wrapper #dialog #form {
+      max-width: 240px;
+      margin: 10px auto 0;
+    }
+
+    #wrapper #dialog #form input {
+      margin: 0 5px;
+      text-align: center;
+      line-height: 80px;
+      font-size: 50px;
+      border: solid 1px #ccc;
+      box-shadow: 0 0 5px #ccc inset;
+      outline: none;
+      width: 20%;
+      transition: all 0.2s ease-in-out;
+      border-radius: 3px;
+    }
+
+    #wrapper #dialog #form input:focus {
+      border-color: #47a44b;
+      box-shadow: 0 0 5px #47a44b inset;
+    }
+
+    #wrapper #dialog #form input::-moz-selection {
+      background: transparent;
+    }
+
+    #wrapper #dialog #form input::selection {
+      background: transparent;
+    }
+
+    #wrapper #dialog button.close {
+      border: solid 2px;
+      border-radius: 30px;
+      line-height: 19px;
+      font-size: 120%;
+      width: 22px;
+      position: absolute;
+      right: 5px;
+      top: 5px;
+    }
+
+    #wrapper #dialog div {
+      position: relative;
+      z-index: 1;
+    }
   </style>
 </head>
 
@@ -118,7 +166,7 @@
                   <form id="signup" action="/">
                     <div class="tab">
                       <div class="form-group has-success form-group-lg">
-                        <label class="text-muted">Mobile Number</label>
+                        <label class="text-muted font-weight-bold">Mobile Number</label>
                         <input type="number" class="form-control has-success font-control-lg"
                           oninput="this.className = 'form-control'">
                         <div class="input-group">
@@ -133,22 +181,23 @@
                       <div class="alert alert-success rounded" role="alert">
                         <i class="fa fa-check fa-2x align-middle mr-2"></i> Confirmation code successfully sent!
                       </div>
-                      <div class="form-group has-success form-group-lg">
-                        <label class="text-muted">Confirmation Code</label>
-                        <input type="number" class="form-control has-success font-control-lg"
-                          oninput="this.className = 'form-control'">
-                        <div class="input-group">
-                          <span class="input-group-btn">
-                            <i class="material-icons">code</i>
-                          </span>
+                      <div id="wrapper">
+                        <div id="dialog">
+                          <label class="text-muted font-weight-bold">Please enter the 4-digit verification code we sent via SMS:</label>
+                          <div id="form">
+                            <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                            <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" /><input
+                              type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" /><input type="text"
+                              maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                          </div>
+                          <a href="#" class="btn-link text-success text-center"><h6 class="mx-auto text-capitalize">Resend Code?</h6></a>
                         </div>
-                        <a href="#" class="btn-link text-success small text-center">Resend Code?</a>
                       </div>
                     </div>
 
                     <div class="tab">
                       <div class="form-group has-success form-group-lg">
-                        <label class="text-muted">Password</label>
+                        <label class="text-muted font-weight-bold">Password</label>
                         <input type="password" class="form-control has-success font-control-lg"
                           oninput="this.className = 'form-control'">
                         <div class="input-group">
@@ -158,7 +207,7 @@
                         </div>
                       </div>
                       <div class="form-group has-success form-group-lg">
-                        <label class="text-muted">Confirm Password</label>
+                        <label class="text-muted font-weight-bold">Confirm Password</label>
                         <input type="password" class="form-control has-success font-control-lg"
                           oninput="this.className = 'form-control'">
                         <div class="input-group">
@@ -300,6 +349,54 @@
         //... and adds the "active" class to the current step:
         x[n].className += " active";
       }
+    </script>
+
+    <script>
+      $(function () {
+        'use strict';
+
+        var body = $('form');
+
+        function goToNextInput(e) {
+          var key = e.which,
+            t = $(e.target),
+            sib = t.next('input');
+
+          if (key != 9 && (key < 48 || key > 57)) {
+            e.preventDefault();
+            return false;
+          }
+
+          if (key === 9) {
+            return true;
+          }
+
+          if (!sib || !sib.length) {
+            sib = body.find('input').eq(0);
+          }
+          sib.select().focus();
+        }
+
+        function onKeyDown(e) {
+          var key = e.which;
+
+          if (key === 9 || (key >= 48 && key <= 57)) {
+            return true;
+          }
+
+          e.preventDefault();
+          return false;
+        }
+
+        function onFocus(e) {
+          $(e.target).select();
+        }
+
+        body.on('keyup', 'input', goToNextInput);
+        body.on('keydown', 'input', onKeyDown);
+        body.on('click', 'input', onFocus);
+
+      })
     </script>
 </body>
 
