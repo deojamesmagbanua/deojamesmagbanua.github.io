@@ -87,7 +87,8 @@
                   <form id="signin" action="/">
                     <div class="form-group has-success form-group-lg">
                       <label class="text-muted font-weight-bold">Mobile Number</label>
-                      <input type="number" class="form-control has-success font-control-lg">
+                      <input type="text" class="form-control has-success font-control-lg" id="phone" name="phone"
+                        data-inputmask="'mask': '+63 999 999 9999'" oninput="this.className = 'form-control'">
                       <div class="input-group">
                         <span class="input-group-btn">
                           <i class="material-icons">dialpad</i>
@@ -110,7 +111,8 @@
                 </div>
               </div>
             </div>
-            <p class="text-muted">Forgot your password? <a href="resetpassword.html" class="btn-link text-success font-weight-bold">Reset
+            <p class="text-muted">Forgot your password? <a href="resetpassword.html"
+                class="btn-link text-success font-weight-bold">Reset
                 it here.</a></p>
           </div>
         </div>
@@ -129,6 +131,8 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
     <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
     <script src="./assets/js/material-kit.js?v=2.0.6" type="text/javascript"></script>
+    <!-- jQuery Input Mask -->
+    <script src="./assets/js/plugins/jquery.inputmask.min.js" type="text/javascript"></script>
 
     <script>
       $(document).ready(function () {
@@ -149,6 +153,9 @@
         checkWidth();
         // Bind event listener
         $(window).resize(checkWidth);
+
+        // Initialize InputMask
+        $(":input").inputmask();
       });
     </script>
 
