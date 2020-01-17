@@ -12,7 +12,7 @@ body {
     font-family: 'Florence';
 }
 
-.helveticanueue {
+.helveticaneue {
     font-family: 'Helvetica Neue';
 }
 
@@ -165,6 +165,14 @@ body {
     #ourworks {
         margin-top: 75px !important;
     }
+
+    #productinfo {
+        margin-top: 100px !important;
+    }
+
+    .carousel-item img {
+        height: auto !important;
+    }
 }
 
 
@@ -186,5 +194,9 @@ body {
 }
 
 button:focus {outline:0;}
+
+.full-h {
+    height: 100vh !important;
+}
 
 
