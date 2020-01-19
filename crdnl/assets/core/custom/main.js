@@ -19,7 +19,8 @@ $(window).on('load', function () { // makes sure the whole site is loaded
     var x = window.matchMedia("(max-width: 768px)")
     myFunction(x) // Call listener function at run time
     x.addListener(myFunction) // Attach listener function on state changes
-    
+
+
 
     $("#menutoggle").click(function () {
         $(".sidepanel").toggleClass('showMenu');
@@ -28,7 +29,7 @@ $(window).on('load', function () { // makes sure the whole site is loaded
     $("#menutoggle").click(function () {
         $("#menutoggle").toggleClass('is-active');
     });
-    
+
     $("#menutoggle-m").click(function () {
         $(".sidepanel").toggleClass('showMenu-m');
     });
@@ -36,6 +37,19 @@ $(window).on('load', function () { // makes sure the whole site is loaded
     $("#menutoggle-m").click(function () {
         $("#menutoggle-m").toggleClass('is-active');
     });
+
+    $('body').on('click', function (event) {
+        if (!$(event.target).is('#menutoggle')) {
+            $(".sidepanel").removeClass("showMenu");
+        }
+    });
+
+    $('body').on('click', function (event) {
+        if (!$(event.target).is('#menutoggle')) {
+            $("#menutoggle").removeClass("is-active");
+        }
+    });
+
 
     var sizeTheOverlays = function () {
         $(".overlay").resize().each(function () {
@@ -57,5 +71,7 @@ $(window).on('load', function () { // makes sure the whole site is loaded
         }
     });
 
+
+    
 
 })

@@ -36,8 +36,8 @@ body {
 
 
 .spinner {
-    width: 150px;
-    height: 150px;
+    width: 175px;
+    height: 175px;
     border-radius: 50%;
     position: relative;
     z-index: 1;
@@ -48,8 +48,8 @@ body {
 
 .spinner:before {
     content: '';
-    width: 150px;
-    height: 150px;
+    width: 175px;
+    height: 175px;
     border-radius: 50%;
     border-top: 5px solid #FFF;
     border-right: 5px solid transparent;
@@ -57,8 +57,8 @@ body {
     border-left: 5px solid transparent;
     position: absolute;
     z-index: 9;
-    top: -7.5px;
-    left: -1px;
+    top: 7px;
+    left: 0;
     animation: rt 2s infinite;
 }
 
@@ -114,7 +114,7 @@ body {
     /* Black*/
     overflow: hidden;
     /* Disable horizontal scroll */
-    padding-top: 60px;
+    padding-top: 25px;
     /* Place content 60px from the top */
     transition: all 0.25s;
     /* 0.5 second transition effect to slide in the sidepanel */
@@ -170,11 +170,25 @@ body {
         margin-top: 100px !important;
     }
 
-    .carousel-item img {
-        height: auto !important;
+    .carousel-item div {
+        height: 50vh !important;
     }
+
+    .sidepanel {
+        padding-top: 60px !important;
+    }
+
 }
 
+
+@media only screen and (min-width: 769px) {
+    #miniGallery {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+}
 
 .overlay {
     position: absolute;
@@ -193,10 +207,10 @@ body {
     opacity: 1;
 }
 
-button:focus {outline:0;}
+button:focus {
+    outline: 0;
+}
 
 .full-h {
     height: 100vh !important;
 }
-
-
