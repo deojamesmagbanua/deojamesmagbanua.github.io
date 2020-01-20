@@ -21,33 +21,21 @@ $(window).on('load', function () { // makes sure the whole site is loaded
     x.addListener(myFunction) // Attach listener function on state changes
 
 
-
     $("#menutoggle").click(function () {
-        $(".sidepanel").toggleClass('showMenu');
+        $(".hamburger").toggleClass('is-active');
     });
 
     $("#menutoggle").click(function () {
-        $("#menutoggle").toggleClass('is-active');
+        $("#mySidepanel").toggleClass('showMenu');
+    });
+
+
+    $("#menutoggle-m").click(function () {
+        $("#mySidepanel").toggleClass('showMenu-m');
     });
 
     $("#menutoggle-m").click(function () {
-        $(".sidepanel").toggleClass('showMenu-m');
-    });
-
-    $("#menutoggle-m").click(function () {
-        $("#menutoggle-m").toggleClass('is-active');
-    });
-
-    $('body').on('click', function (event) {
-        if (!$(event.target).is('#menutoggle')) {
-            $(".sidepanel").removeClass("showMenu");
-        }
-    });
-
-    $('body').on('click', function (event) {
-        if (!$(event.target).is('#menutoggle')) {
-            $("#menutoggle").removeClass("is-active");
-        }
+        $(".hamburger").toggleClass('is-active');
     });
 
 
@@ -72,6 +60,6 @@ $(window).on('load', function () { // makes sure the whole site is loaded
     });
 
 
-    
+
 
 })
