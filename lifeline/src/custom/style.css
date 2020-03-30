@@ -235,9 +235,9 @@ label:focus,
   -o-transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  width: 200px;
+  width: 285px;
   position: absolute;
-  left: -200px;
+  left: -285px;
   top: 0;
   bottom: 0;
   list-style: none;
@@ -250,7 +250,6 @@ label:focus,
 .nav-sidebar.active ul {
   left: 0;
   background-color: #EEE !important;
-  box-shadow: 0 0 15px rgba(0,0,0,0.25) !important;
 }
 
 .body {
@@ -260,8 +259,13 @@ label:focus,
   transition: all 0.2s ease;
   position: relative;
   left: 0;
-  z-index: 1;
+  height: 100vh;
 }
 .body.is-active {
-  left: 200px;
+  left: 285px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15) !important;
+}
+
+.nav-sidebar ul li {
+  border-bottom: none !important;
 }
