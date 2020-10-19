@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, .nav-link, .btn-pompadour {
   color: #E5A417 !important
 }
 
-.text-pompadour:hover {
+a .text-pompadour:hover {
   opacity: .85;
   
 }
