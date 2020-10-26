@@ -1,9 +1,9 @@
 <a class="text-dark rounded-circle btn-light btn shadow" id="back-to-top" title="Back to Top"><i
 		class="fas fa-arrow-up pt-1"></i></a>
 
-<nav class="navbar navbar-expand-lg background-change-on-scroll navbar-dark bg-black">
+<nav class="navbar navbar-expand-lg background-change-on-scroll navbar-dark bg-black py-3">
 	<div class="container">
-		<a class="navbar-brand" href="#"><img src="./res/img/logo.png" width="150px"></a>
+		<a class="navbar-brand" href="#"><img src="./res/img/logo.png" width="175px"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#TheNav" aria-controls="TheNav"
 			aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>

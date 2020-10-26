@@ -10,6 +10,24 @@ h1, h2, h3, h4, h5, .nav-link, .btn-pompadour {
   font-family: 'Open Sans Condensed', sans-serif;
 }
 
+.text-opensans {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.text-metropolis {
+  font-family: 'Metropolis', sans-serif;
+}
+
+.nav-pills a {
+  background: white;
+  color: black !important
+}
+
+.nav-pills .active {
+  background: black !important;
+  color: white !important
+}
+
 .nav-link, .btn-pompadour {
   font-weight: bold;
 }
@@ -34,9 +52,12 @@ h1, h2, h3, h4, h5, .nav-link, .btn-pompadour {
   color: #E5A417 !important
 }
 
-a .text-pompadour:hover {
-  opacity: .85;
-  
+.text-black {
+  color: #000 !important
+}
+
+.bg-pompadour {
+  background: #E5A417 !important
 }
 
 .btn-pompadour {
@@ -53,4 +74,13 @@ a .text-pompadour:hover {
 
 .font-weight-black {
   font-weight: 900;
+}
+
+.badge-pompadour {
+  color: #fff;
+  background-color: #E5A417 !important;
+}
+
+.shadow-hover:hover {
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
