@@ -25,8 +25,3 @@ if ($('#back-to-top').length) {
 }
 
 AOS.init();
-
-$(document).ready(function () {
-  $('.owl-carousel').owlCarousel({
-  })
-});
