@@ -24,8 +24,8 @@
 					<a class="nav-link text-light" href="pricing.php">SHOP</a>
 				</li>
 				<li class="nav-item ml-3">
-					<a id="action-btn" class="btn d-none d-lg-block btn-pompadour" href="#" role="button"><i class="fas fa-user mr-1"></i> Sign Up </a>
-					<a class="text-danger d-lg-none nav-link text-pompadour" href="#"><i class="fas fa-user"></i> Sign Up</a>
+					<a id="action-btn" class="btn d-none d-lg-block btn-pompadour" href="#" role="button"><i class="fas fa-calendar-check mr-1"></i> Book Now </a>
+					<a class="text-danger d-lg-none nav-link text-pompadour" href="#"><i class="fas fa-calendar-check"></i> Book Now</a>
 				</li>
 			</ul>
 		</div>

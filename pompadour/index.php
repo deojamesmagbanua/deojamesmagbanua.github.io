@@ -156,15 +156,19 @@
 			<div class="row">
 				<div class="col">
 					<div class="media py-5">
-						<p class="font-weight-black text-black display-4 mr-5 align-self-center" id="howitworks">Latest
-							News <br>and Stories</p>
+						<span class="align-self-center">
+							<p class="font-weight-black text-black display-4 mr-5" id="howitworks">Latest
+								News <br>and Stories</p><br>
+								<a class="btn btn-pompadour text-black" href="#">Read More <i class="fa fa-arrow-right ml-2"></i></a>
+						</span>
 						<div class="media-body">
 							<div class="row text-center">
 								<div class="col shadow-hover py-3">
 									<div class="card border-0" style="width: 100%;">
 										<img src="./res/img/news/1.png" class="card-img-top" alt="...">
 										<div class="card-body">
-											<h5 class="card-title text-metropolis h5 font-weight-bold">Pompadour partners with TESDA to support local barbers.</h5>
+											<h5 class="card-title text-metropolis h5 font-weight-bold">Pompadour
+												partners with TESDA to support local barbers.</h5>
 											<p class="card-text">The company struck an exciting partnership with TESDA
 												to train
 												aspiring barbers and stylists.</p>
@@ -178,8 +182,10 @@
 									<div class="card border-0" style="width: 100%;">
 										<img src="./res/img/news/2.png" class="card-img-top" alt="...">
 										<div class="card-body">
-											<h5 class="card-title text-metropolis h5 font-weight-bold">Cebu City opens opportunities to barbers amidst COVID through app</h5>
-											<p class="card-text">Mayor Labella has granted permission for apps providing necessity services amidst COVID pandemic.</p>
+											<h5 class="card-title text-metropolis h5 font-weight-bold">Cebu City opens
+												opportunities to barbers amidst COVID through app</h5>
+											<p class="card-text">Mayor Labella has granted permission for apps providing
+												necessity services amidst COVID pandemic.</p>
 											<a href="#"
 												class="btn btn-dark btn-block text-opensans font-weight-black">Read
 												Post</a>
@@ -194,7 +200,6 @@
 			</div>
 		</div>
 	</div>
-	
 
 	<div class="py-5 bg-pompadour">
 		<div class="container">
@@ -220,10 +225,8 @@
 	<script defer src="js/fontawesome-all.js"></script>
 	<script src="js/zenscroll-min.js"></script>
 	<script src="js/aos.js"></script>
-	<script src="js/particles.min.js"></script>
-	<script src="js/app.js"></script>
-	<script src="js/main.js"></script>
 	<script src="https://kit.fontawesome.com/d8134c252f.js" crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>
